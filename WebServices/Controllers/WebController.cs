@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+//using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
+//using System.Web.Mvc;
 using WebServices.Models;
 
 namespace WebServices.Controllers
@@ -17,12 +17,14 @@ namespace WebServices.Controllers
             return repo.GetAll();
         }
 
-        public Reservation PostReservation(Reservation item)
+        [HttpPost]
+        public Reservation CreateReservation(Reservation item)
         {
             return repo.Add(item);
         }
 
-        public bool PutReservation(Reservation item)
+        [HttpPut]
+        public bool UpdateReservation(Reservation item)
         {
             return repo.Update(item);
         }

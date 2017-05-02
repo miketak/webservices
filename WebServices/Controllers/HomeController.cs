@@ -14,7 +14,7 @@ namespace WebServices.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View(repo.GetAll());
+            return View();
         }
 
         public ActionResult Add(Reservation item)
